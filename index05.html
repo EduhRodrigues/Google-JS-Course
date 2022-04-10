@@ -53,16 +53,16 @@
         <h2>
         ► Arithmetic Operators Precedence Order: <h2 />
        <h3>
-          () <br />
-          ** <br />
-          * / % <br />
-          + - <br /> <br>
+          1º&nbsp () <br />
+          2º&nbsp ** <br />
+          3º&nbsp * / % <br />
+          4º&nbsp + - <br /> <br>
         </h3>
          
   </body>
    
   <script>
-    //document interation
+    //document interaction
     var a = 5 + 3
     var b = a % 5
     var c = 5 * b ** 2
@@ -116,7 +116,87 @@
     j ++
     document.write(`<h3>j = 10 <br>
     j ++ <br>
-    j = ${j} </h3>`)
+    j = ${j} </h3> <br>`)
+
+    document.write(` <h2>► Relationals Operators: <br>`)
+      document.write(`<h3>
+        > &nbsp&nbsp < &nbsp&nbsp >= &nbsp&nbsp <= &nbsp&nbsp >= &nbsp&nbsp == &nbsp&nbsp != </h3> <br> `)
+
+    document.write(` <h2>► Relationals Operations: <br>`)
+      document.write(`<h3>
+        5  >  2&nbsp&nbsp→ true<br>
+        7  <  4&nbsp&nbsp→ false<br>
+        8  >=  8&nbsp&nbsp→ true<br>
+        9  <=  7&nbsp&nbsp→ false<br>
+        5  ==  5&nbsp&nbsp→ true<br>
+        4  !=  4&nbsp&nbsp→ false`)
+
+      min_score = 8.0
+      score = 8.6
+      license = score >= min_score
+
+      document.write(`<h3> Checking Qualification by Score:<h3>
+      min_score = 8.0 <br>
+      score = 8.6 <br>
+      license = ${license} </h3>`)
+
+      item_size = "38"
+      item_quantity = 38
+      same_amount = item_size == item_quantity
+      sabe_identity = item_size === item_quantity
+      diferent = item_size !== item_quantity
+
+      document.write(`<h3> Comparing Amounts and Identities:<h3>
+      item_size = "38" <br>
+      item_quantity = 38 <br>
+      same_amount = ${same_amount} <br>
+      same_identity = ${sabe_identity} <br>
+      are_diferent = ${diferent} <br>
+      typeof item_size = ${typeof item_size} <br>
+      typeof item_quantity = ${typeof item_quantity} </h3> <br>`)
+
+      document.write(` <h2>► Logical operators: <br>`)
+        document.write(`<h3>
+        ! &nbsp&nbsp && &nbsp&nbsp || &nbsp&nbsp </h3> <br> `)
+        document.write(` <h2>► Logicals Operations Order: </h2>`)
+          document.write(` <h3> 
+            1º&nbsp ! <br>
+            2º&nbsp && <br>
+            3º&nbsp || </h3><br>`)
+
+            document.write(` <h2>► Logicals Operations: </h2>`)
+
+            enlgish_level = 3 
+            age = 37
+            country = "Brazil" 
+            opentowork = true
+            english_skill = enlgish_level >= 3
+            life_experience = age >= 18 && age <= 60
+            able = opentowork === true
+            nacionality = country == "Brazil" || "Argentina" ||"Uruguay"
+            hiring = english_skill === true && life_experience === true && able === true && nacionality === true
+            
+          document.write(` <h3> 
+            enlgish_level = 3 <br>
+            age = 37 <br>
+            country = "Brazil" <br>
+            opentowork = true <br> <br>
+            english_skill = enlgish_level >= 3 <br>
+            life_experience = age >= 18 && age <= 60 <br>
+            able = opentowork === true <br>
+            nacionality = country == "Brazil" || "Argentina" || "Uruguay" <br><br>
+            hiring = english_skill === true <br>
+            && life_experience === true <br>
+            && able === true <br>
+            && nacionality === true <br> 
+            <br>
+            hiring = ${hiring}`)
+
+      
+
+
+
+
    
   </script>
 </html>
