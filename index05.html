@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Course - Operators</title>
+
+    <style>
+      /*styling the document*/
+      body {
+        margin-top: 7vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        background-color: black;
+        color: #664bff;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+      }
+    
+      h2 {
+        font-family: sans-serif;
+        color: #664bff;
+        font-size:larger;
+      }
+      h3 {
+        color: #ffffff;
+        font-family:'Times New Roman', Times, serif;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--document content-->
+    <div>
+      <h1>
+        Operators in<br />
+        JScript
+      </h1>
+    </div>
+    <div>
+      <h2>
+        • Arithmetics &nbsp • Assignment &nbsp • Relational &nbsp • Logical &nbsp • Ternary <br><br> <br>
+        ► Arithmetrics Operators:
+      </h2>
+      <h3>
+        + - * / % **<br><br>
+      </h3>
+     
+        <h2>
+        ► Arithmetic Operators Precedence Order: <h2 />
+       <h3>
+          () <br />
+          ** <br />
+          * / % <br />
+          + - <br /> <br>
+        </h3>
+         
+  </body>
+   
+  <script>
+    //document interation
+    var a = 5 + 3
+    var b = a % 5
+    var c = 5 * b ** 2
+    var d = 10 - a / 2
+    var e = (6 * 2) / d
+    var f = (b % e) + 4 / e
+
+    document.write(`<h2>► Arithmetics Operations:</h2>`)
+    document.write(`<h3>
+      var a = 5 + 3 <br>
+      var b = a % 5 <br>
+      var c = 5 * b ** 2 <br>
+      var d = 10 - a / 2 <br>
+      var e = (6 * 2) / d <br>
+      var f = (b % e) + 4 / e <br><br>
+      a=${a}, b=${b}, c=${c}, d=${d}, e=${e}, f=${f} </h3> <br>`)
+   
+    document.write(`<h2>► Simple Assignment: </h2>`)
+    n = 3
+    document.write(`<h3>n=${n}</h3><br>`)
+
+    document.write(`<h2>► Auto Assignment: <br>`)
+
+    n += 4
+    document.write(`<h3>n += 4 <br>
+    n=${n} </h3>`)
+
+    n -= 4
+    document.write(`<h3>n -= 4 <br> 
+    n=${n} </h3>`)
+    
+    n *= 4
+    document.write(`<h3>n *= 4 <br>
+    n=${n} </h3>`)
+   
+    n /= 2
+    document.write(`<h3>n /= 4 <br>
+    n= ${n} </h3>`)
+    
+    n **= 2
+    document.write(`<h3>n **= 4 <br>
+    n= ${n} </h3>`)
+   
+    n %= 5
+    document.write(`<h3>n%= 4 <br>
+    n= ${n} </h3> <br>`)
+    
+    document.write(` <h2>► Increment Assignment: <br>`)
+
+    j = 10
+    j ++
+    document.write(`<h3>j = 10 <br>
+    j ++ <br>
+    j = ${j} </h3>`)
+   
+  </script>
+</html>

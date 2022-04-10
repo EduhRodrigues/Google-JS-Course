@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Course - Var Concatenating</title>
+
+    <style>
+      /*styling the document*/
+      body {
+        margin-top: 5vh;
+        gap: 3vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        background-color: black;
+        color: #664bff;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+      }
+      h2 {
+        margin-left: 1vh;
+        font-size: 14px;
+        font-weight: lighter;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--document content-->
+    <div>
+      <h1>
+        Transforming and <br />
+        Concatenating a var <br />
+        in JS
+      </h1>
+    </div>
+    <div>
+      <h2>
+        <pre>
+          <code>
+            var n1 = Number(window.prompt('Type a number'))
+             //receiving and converting to an Integer or Float Number the first value. <br>
+            var n2 = Number(window.prompt('Type one more number to sum'))
+             //receiving and converting to an Integer or Float Number the second value. <br>
+            var result = n1 + n2
+             // summing concatenated Number vars. <br>
+             window.alert(
+              `That was easy! ${' '} ${n1.toFixed(2).replace('.', ',')} + ${n2
+              .toFixed(2).replace('.', ',')} = ${result.toFixed(2).replace('.', ',')}`)
+             //displaying the sum result through placeholder template string concatenation `${}`.
+             //Note: They are between `backticks`! <br>
+             window.alert(`Now pt-BR currency monatary value:
+             ${result.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+             //locale monetary currency.
+          </code>
+        </pre>
+      </h2>
+    </div>
+  </body>
+
+  <script>
+    //document interation
+    var n1 = Number(window.prompt('Type a number')) //receiving and converting to an Integer or Float Number the first value.
+    var n2 = Number(window.prompt('Type one more number to sum')) //receiving and converting to an Integer or Float Number the second value.
+    var result = n1 + n2 //summing concatenated vars Number.
+    window.alert(
+      `That was easy! 
+      ${' '} ${n1.toFixed(2).replace('.', ',')} + ${n2
+        .toFixed(2)
+        .replace('.', ',')} = ${result.toFixed(2).replace('.', ',')}`
+    )
+    window.alert(`pt-BR:
+    ${result.toLocaleString('pt-BR', {
+      //locale
+      style: 'currency', //monetary $
+      currency: 'BRL' //country R$
+    })}`)
+  </script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Course - Character Counter</title>
+
+    <style>
+      /*styling the document*/
+      body {
+        margin-top: 7vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: center;
+        background-color: black;
+        color: #664bff;
+        word-spacing: 1px;
+        letter-spacing: 1px;
+      }
+      h2 {
+        font-size: 8em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--document content-->
+    <div>
+      <h1>
+        Counting the Character<br />
+        Text Quantity<br />
+        in JScript
+      </h1>
+    </div>
+    <div>
+      <h2></h2>
+    </div>
+  </body>
+
+  <script>
+    //document interation
+    var text = window.prompt('Type a text to count the character quantity')
+    document.write(
+      `<strong> ${text.length} </strong> characters counted <br><br>`
+    )
+    document.write(
+      `<strong> UPPERCASE: </strong> ${text.toUpperCase()} <br><br>`
+    )
+    document.write(`<strong> lowercase: </strong> ${text.toLowerCase()} <br>`)
+  </script>
+</html>
