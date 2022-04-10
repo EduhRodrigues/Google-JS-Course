@@ -53,6 +53,8 @@
         <h2>
         ► Arithmetic Operators Precedence Order: <h2 />
        <h3>
+          Arithmetic Operators has the major preference, <br />
+          in the following order. <br>
           1º&nbsp () <br />
           2º&nbsp ** <br />
           3º&nbsp * / % <br />
@@ -119,8 +121,11 @@
     j = ${j} </h3> <br>`)
 
     document.write(` <h2>► Relationals Operators: <br>`)
-      document.write(`<h3>
-        > &nbsp&nbsp < &nbsp&nbsp >= &nbsp&nbsp <= &nbsp&nbsp >= &nbsp&nbsp == &nbsp&nbsp != </h3> <br> `)
+      document.write(`<h3>  They have no order of precedence but, <br>
+        they are read from left to right. <br>
+        > &nbsp&nbsp < &nbsp&nbsp >= &nbsp&nbsp <= &nbsp&nbsp >= &nbsp&nbsp == &nbsp&nbsp != <br>
+       
+        </h3> <br> `)
 
     document.write(` <h2>► Relationals Operations: <br>`)
       document.write(`<h3>
@@ -155,8 +160,9 @@
       typeof item_size = ${typeof item_size} <br>
       typeof item_quantity = ${typeof item_quantity} </h3> <br>`)
 
-      document.write(` <h2>► Logical operators: <br>`)
-        document.write(`<h3>
+      document.write(` <h2>► Logical Operators: <br>`)
+        document.write(`<h3> 
+        They are in the third position of the order of precedence. <br>
         ! &nbsp&nbsp && &nbsp&nbsp || &nbsp&nbsp </h3> <br> `)
         document.write(` <h2>► Logicals Operations Order: </h2>`)
           document.write(` <h3> 
@@ -190,7 +196,17 @@
             && able === true <br>
             && nacionality === true <br> 
             <br>
-            hiring = ${hiring}`)
+            hiring = ${hiring} <br><br>`)
+
+            document.write(` <h2>► Ternary Operators: <br>`)
+              document.write(` <h3>
+                test ? true : false`)
+
+                document.write(` <h2>► Ternary Operation: <br>`)
+                contract = hiring?'Hire him':"Talents Bank"
+            document.write(` <h3>
+              contract = hiring?'Hire him':"Talents Bank"<br>
+              contract = ${contract}</h3>`)
 
       
 
