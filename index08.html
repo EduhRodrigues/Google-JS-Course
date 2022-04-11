@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Course - DOM Events</title>
+    <title>JS Course - DOM Event Listener</title>
 
     <style>
       /*styling the document*/
@@ -57,7 +57,7 @@
        Trainning<br> Dom Events
      </h1>
 
-   <div id='area' onmouseover="entrou()" onclick="clicou()" ondblclick="clicou2x()" onmouseleave="saiu()">
+   <div id="area">
      Entre Aqui.
    </div><br>
 
@@ -70,7 +70,12 @@
   <script>
     //document interaction
 
-    var a = window.document.querySelector('div#area')
+    var a = window.document.getElementById("div#area")
+    a.addEventListener('onmouseover', entrou)
+    a.addEventListener('onclick=', clicou)
+    a.addEventListener('ondblclick', clicou2x)
+    a.addEventListener('onmouseleave', saiu)
+    
 
     function entrou() {
       a.innerText='Você entrou'
