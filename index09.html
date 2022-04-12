@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Course - Summing</title>
+
+    <style>
+      /*styling the document*/
+      body {
+        margin: 0;
+        border: 0;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        height: 90vh;
+      }
+      h1 {
+        color: rgb(78, 1, 149);
+      }
+      div {
+        width: 2vh;
+        margin-top: -2.5vh;
+      }
+      input[type='number' i] {
+        font-size: 12pt;
+        color: black;
+        border: 3px solid rgb(78, 1, 149);
+        border-radius: 3vh;
+        width: 10vh;
+        padding-left: 1.5vh;
+      }
+      input[type='button' i] {
+        font-size: 12pt;
+        color: white;
+        width: 15vh;
+        height: 5vh;
+        background-color: rgb(78, 1, 149);
+        border-radius: 1.5vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--document content-->
+    <h1>Type numbers to sum:</h1>
+    <input type="number" name="txtn1" id="txtn1" />
+    +
+    <input type="number" name="txtn2" id="txtn2" /><br />
+
+    <div id="res"></div>
+    <input type="button" value="somar" onclick="somar()" />
+  </body>
+
+  <script>
+    //document interaction
+
+    function somar() {
+      var tn1 = window.document.querySelector('input#txtn1')
+      var tn2 = window.document.querySelector('input#txtn2')
+      var res = window.document.querySelector('div#res')
+      var n1 = Number(txtn1.value)
+      var n2 = Number(txtn2.value)
+      var s = n1 + n2
+      res.innerHTML = `${s}`
+    }
+  </script>
+</html>

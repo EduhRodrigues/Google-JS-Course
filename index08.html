@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <heads
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,18 +9,18 @@
     <style>
       /*styling the document*/
       body {
-      display: grid;
-      justify-content: center;
-      align-content: center;
-      justify-items: center;
-      height: 90vh;
-       }
-       h1 {
-         margin-left: 3vh;
-         color: rgb(92, 0, 178);
-       }
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        height: 90vh;
+      }
+      h1 {
+        margin-left: 3vh;
+        color: rgb(92, 0, 178);
+      }
 
-      div#area{
+      div#area {
         font: normal 16pt Arial;
         background: rgb(66 133 244);
         color: rgb(255, 255, 255);
@@ -31,14 +31,14 @@
         text-align: center;
         align-items: center;
         border-radius: 10%;
-       }
-       div#dark_mode {
-         letter-spacing: .3vh;
+      }
+      div#dark_mode {
+        letter-spacing: 0.3vh;
         font-size: 10pt;
         color: white;
         position: absolute;
-        bottom: .4vh;
-        right: .4vh;
+        bottom: 0.4vh;
+        right: 0.4vh;
         width: 17vh;
         height: 3vh;
         background-color: black;
@@ -52,53 +52,48 @@
   </head>
 
   <body>
-     <!--document content-->
-     <h1>
-       Trainning<br> Dom Events
-     </h1>
+    <!--document content-->
+    <h1>
+      Trainning<br />
+      Dom Events
+    </h1>
 
-   <div id="area">
-     Entre Aqui.
-   </div><br>
+    <div id="area">Entre Aqui.</div>
+    <br />
 
-   <div id="dark_mode" onclick="escurecer()">
-    Dark Mode
-   </div>
-   
+    <div id="dark_mode" onclick="escurecer()">Dark Mode</div>
   </body>
 
   <script>
     //document interaction
 
-    var a = window.document.getElementById("div#area")
-    a.addEventListener('onmouseover', entrou)
-    a.addEventListener('onclick=', clicou)
-    a.addEventListener('ondblclick', clicou2x)
-    a.addEventListener('onmouseleave', saiu)
-    
+    var a = window.document.querySelector('div#area')
+    a.addEventListener('mouseover', entrou)
+    a.addEventListener('click', clicou)
+    a.addEventListener('dblclick', clicou2x)
+    a.addEventListener('mouseleave', saiu)
 
     function entrou() {
-      a.innerText='Você entrou'
-      a.style.background = "green"
+      a.innerText = 'Você entrou.'
+      a.style.background = 'green'
     }
     function clicou() {
-      a.innerText='Você clicou!'
-      a.style.background = "yellow"
-      a.style.color = "black"
+      a.innerText = 'Você clicou!'
+      a.style.background = 'yellow'
+      a.style.color = 'black'
     }
     function clicou2x() {
-      a.innerText='Clicou 2 vezes.'
-      a.style.background = "violet"
-      a.style.color = "black"
+      a.innerText = 'Clicou 2 vezes.'
+      a.style.background = 'violet'
+      a.style.color = 'black'
     }
     function saiu() {
-      a.innerText='Você saiu'
-      a.style.background = "red"
-      a.style.color = "white"
+      a.innerText = 'Você saiu.'
+      a.style.background = 'red'
+      a.style.color = 'white'
     }
     function escurecer() {
-      document.body.style.backgroundColor = "black"; 
+      document.body.style.backgroundColor = 'black'
     }
-
   </script>
 </html>
