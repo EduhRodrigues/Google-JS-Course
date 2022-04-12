@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Course - Speed Cheking</title>
+
+    <style>
+      /*styling the document*/
+      body {
+        background-color: black;
+        margin: 0;
+        border: 0;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        height: 90vh;
+      }
+      h1 {
+        color: rgb(78, 1, 149);
+      }
+      h2 {
+        color: rgb(255, 255, 255);
+        font-size: small;
+        font-family: sans-serif;
+        margin-top: -2vh;
+      }
+      div {
+        border: solid;
+        border-color: #49089d;
+        width: 46vh;
+        font-size: 12pt;
+        color: white;
+        padding: 2vh;
+        letter-spacing: 0.4vh;
+      }
+      input[type='number' i] {
+        font-size: 14pt;
+        color: rgb(255, 255, 255);
+        background-color: black;
+        border: 3px solid rgb(78, 1, 149);
+        border-radius: 3vh;
+        width: 8vh;
+        padding: 2vh;
+        padding-right: 0;
+        margin-top: 2vh;
+      }
+      input[type='button' i] {
+        font-size: 12pt;
+        color: white;
+        width: 15vh;
+        height: 5vh;
+        margin-top: 3vh;
+        background-color: rgb(78, 1, 149);
+        border-radius: 1.5vh;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--document content-->
+    <h1>
+      Speed Limit <br />
+      Checker <br />
+    </h1>
+    <h2>
+      Enter the recorded speed <br />
+      in the field below: <br />
+    </h2>
+    <input type="number" id="txtv" />
+
+    <input type="button" value="Analyze" onclick="analizar()" />
+    <br />
+    <div id="res"></div>
+  </body>
+
+  <script>
+    //document interaction
+
+    function analizar() {
+      var txtv = window.document.querySelector('input#txtv')
+      var res = window.document.querySelector('div#res')
+      var vel = Number(txtv.value)
+      res.innerHTML = `Velocidade registrada: ${vel}Km/h`
+      if (vel > 60)
+        res.innerHTML = `<p>Velocidade registrada: ${vel}Km/h <br><br>
+        Limite de velocidade excedido.</P>`
+    }
+  </script>
+</html>
